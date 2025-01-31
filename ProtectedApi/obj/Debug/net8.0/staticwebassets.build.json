@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "hXB90CDXIJUet6VK+z000y/zOxB0hEgXp02wj4AwFj4=",
+  "Source": "ProtectedApi",
+  "BasePath": "_content/ProtectedApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

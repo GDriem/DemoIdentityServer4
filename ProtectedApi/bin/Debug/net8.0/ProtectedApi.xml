@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ProtectedApi</name>
+    </assembly>
+    <members>
+        <member name="M:ProtectedApi.Controllers.ProductController.GetAll">
+            <summary>
+            Obtiene todos los productos.
+            </summary>
+            <returns>Una lista de productos.</returns>
+        </member>
+        <member name="M:ProtectedApi.Controllers.ProductController.GetById(System.Int32)">
+            <summary>
+            Obtiene un producto por id
+            </summary>
+            <param name="id"></param>
+            <returns>retorna un objeto product</returns>
+        </member>
+        <member name="M:ProtectedApi.Controllers.ProductController.Add(ProtectedApi.Models.Product)">
+            <summary>
+            Agrega un producto
+            </summary>
+            <param name="product"></param>
+            <returns>retorna el producto creado</returns>
+        </member>
+        <member name="M:ProtectedApi.Controllers.ProductController.Delete(System.Int32)">
+            <summary>
+            Elimina un producto
+            </summary>
+            <param name="id"></param>
+            <returns>retorna </returns>
+        </member>
+        <member name="M:ProtectedApi.Controllers.ProductController.GetPaged(System.String,System.Int32,System.Int32)">
+            <summary>
+            Obtiene productos con soporte para paginación y búsqueda.
+            </summary>
+            <param name="search">Término de búsqueda opcional.</param>
+            <param name="page">Número de página (1 por defecto).</param>
+            <param name="pageSize">Tamaño de página (10 por defecto).</param>
+            <returns>Productos paginados.</returns>
+        </member>
+    </members>
+</doc>
