@@ -47,5 +47,29 @@ namespace ProtectedApi.Services
                 .ToList();
         }
 
+        public async Task<ServiceResponse> UpdateProductAsync(int id, ProductUpdateDto productDto)
+        {
+            var product =  GetById(id);
+            if (product == null)
+                return new ServiceResponse
+                {
+                    Success = false,
+                    StatusCode = 404,
+                    Message = $"Product with ID {id} not found."
+                };
+
+            // Actualizar los campos necesarios
+            product.Name = productDto.Name;
+            product.Price = productDto.Price;
+
+            
+            return new ServiceResponse
+            {
+                Success = true,
+                Message = "Product updated successfully."
+            };
+        }
+
+
     }
 }

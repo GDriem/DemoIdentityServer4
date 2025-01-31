@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Iniciar Sesión</h2>
+
+<form asp-action="LoginPost" method="post">
+    <input type="hidden" name="returnUrl" value="@ViewData["ReturnUrl"]" />
+    <button type="submit">Iniciar sesión</button>
+</form>

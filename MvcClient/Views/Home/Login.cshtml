@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+
+<!-- Este formulario no recoge usuario ni contraseña, simplemente tiene un botón que redirige al IdentityServer -->
+<form asp-action="LoginPost" method="post">
+    <button type="submit">Iniciar sesión con IdentityServer</button>
+</form>

@@ -83,5 +83,29 @@ namespace ProtectedApi.Controllers
             return Ok(products);
         }
 
+
+        /// <summary>
+        /// Updates an existing product.
+        /// </summary>
+        /// <param name="id">The ID of the product to update.</param>
+        /// <param name="productDto">The product data transfer object containing updated information.</param>
+        /// <returns>An IActionResult indicating the result of the update operation.</returns>
+        [HttpPut("{id}")]
+        public async Task<IActionResult> EditProduct(int id, [FromBody] ProductUpdateDto productDto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var result = await _productService.UpdateProductAsync(id, productDto);
+
+            if (!result.Success)
+                return result.StatusCode == 404
+                    ? NotFound(result.Message)
+                    : BadRequest(result.Message);
+
+            return Ok(new { Message = result.Message });
+        }
+
+
     }
 }

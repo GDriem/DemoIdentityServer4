@@ -5,3 +5,7 @@
 /ProtectedApi/keys/is-signing-key-3E3F6DD743F72020001E36AA7B3C5A4F.json
 /MvcClient/bin/Debug/net8.0
 /MvcClient/obj
+/ProtectedApi/bin/Debug/net8.0
+/ProtectedApi/obj
+/ProtectedApi/.vs
+/.vs

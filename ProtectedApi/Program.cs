@@ -1,3 +1,4 @@
+锘縰sing Duende.IdentityServer.Configuration;
 using Duende.IdentityServer.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -11,36 +12,51 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-// Configuraci髇 de IdentityServer
+//Consola
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+builder.Logging.AddDebug();
+
+// Configuraci贸n de IdentityServer
 builder.Services.AddIdentityServer(options =>
 {
-    options.EmitStaticAudienceClaim = true; // Configuraci髇 necesaria para evitar errores de validaci髇
-})
-.AddInMemoryApiScopes(new[]
-{
-    new ApiScope("api1", "My Protected API") // Definir el scope de la API
-})
-.AddInMemoryClients(new[]
-{
-    new Client
-    {
-        ClientId = "client",
-        AllowedGrantTypes = GrantTypes.ClientCredentials,
-        ClientSecrets = { new Secret("secret".Sha256()) },
-        AllowedScopes = { "api1" }
-    }
-});
+    options.EmitStaticAudienceClaim = true; // Configuraci贸n necesaria para evitar errores de validaci贸n
+}).AddInMemoryClients(Config.Clients)
+    .AddInMemoryIdentityResources(Config.IdentityResources)
+    .AddInMemoryApiScopes(Config.ApiScopes)
+    .AddInMemoryApiResources(Config.ApiResources)
+    .AddTestUsers(Config.TestUsers) // Agrega usuarios de prueba
+    .AddDeveloperSigningCredential(); // 鈿狅笍 Solo para desarrollo
 
-// Configurar autenticaci髇 con JWT
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+
+// Configurar autenticaci贸n con JWT
+//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//    .AddJwtBearer("Bearer", options =>
+//    {
+//        options.Authority = "https://localhost:7108"; // URL del servidor de identidad
+//        options.TokenValidationParameters = new TokenValidationParameters
+//        {
+//            ValidateAudience = false 
+//        };
+//    });
+
+// Habilitar autenticaci贸n con tokens en la API
+builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer("Bearer", options =>
     {
-        options.Authority = "https://localhost:7108"; // URL del servidor de identidad
-        options.TokenValidationParameters = new TokenValidationParameters
+        options.Authority = "https://localhost:7108"; // URL del IdentityServer
+        options.Audience = "api1"; // Nombre de la API definida en Config.cs
+
+        options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
         {
-            ValidateAudience = false 
+            ValidateIssuerSigningKey = true,
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true
         };
     });
+
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -77,6 +93,15 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+//Redireccion del Login
+builder.Services.Configure<IdentityServerOptions>(options =>
+{
+    options.UserInteraction.LoginUrl = "https://localhost:7168/account/login"; // 馃敼 Cliente MVC manejar谩 el login
+    options.UserInteraction.LogoutUrl = "https://localhost:7168/account/logout";
+    options.UserInteraction.ErrorUrl = "https://localhost:7168/home/error";
+});
+
+
 
 //Dependencias
 builder.Services.AddSingleton<ProductService>();
@@ -93,11 +118,18 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
+app.Use(async (context, next) =>
+{
+    Console.WriteLine($"Incoming request: {context.Request.Path} {context.Request.QueryString}");
+    await next();
+});
 // Configurar middleware
 app.UseIdentityServer();
 app.UseAuthentication();
 app.UseAuthorization();
+
+
+
 
 app.MapControllers();
 
