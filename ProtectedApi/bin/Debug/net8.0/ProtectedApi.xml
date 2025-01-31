@@ -4,6 +4,31 @@
         <name>ProtectedApi</name>
     </assembly>
     <members>
+        <member name="T:AccountController">
+            <summary>
+            Controller for handling account-related actions such as login and logout.
+            </summary>
+        </member>
+        <member name="M:AccountController.Login(System.String)">
+            <summary>
+            Displays the login view.
+            </summary>
+            <param name="returnUrl">The URL to return to after login.</param>
+            <returns>The login view.</returns>
+        </member>
+        <member name="M:AccountController.LoginPost(System.String)">
+            <summary>
+            Handles the login post request.
+            </summary>
+            <param name="returnUrl">The URL to return to after login.</param>
+            <returns>A challenge result to initiate the OpenID Connect authentication.</returns>
+        </member>
+        <member name="M:AccountController.Logout">
+            <summary>
+            Handles the logout request.
+            </summary>
+            <returns>A sign-out result to log the user out and redirect to the home page.</returns>
+        </member>
         <member name="M:ProtectedApi.Controllers.ProductController.GetAll">
             <summary>
             Obtiene todos los productos.
@@ -39,6 +64,14 @@
             <param name="page">Número de página (1 por defecto).</param>
             <param name="pageSize">Tamaño de página (10 por defecto).</param>
             <returns>Productos paginados.</returns>
+        </member>
+        <member name="M:ProtectedApi.Controllers.ProductController.EditProduct(System.Int32,ProtectedApi.Models.ProductUpdateDto)">
+            <summary>
+            Updates an existing product.
+            </summary>
+            <param name="id">The ID of the product to update.</param>
+            <param name="productDto">The product data transfer object containing updated information.</param>
+            <returns>An IActionResult indicating the result of the update operation.</returns>
         </member>
     </members>
 </doc>

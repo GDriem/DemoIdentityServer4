@@ -47,3 +47,10 @@ C:\Users\scspsti10\source\repos\ProtectedApi\ProtectedApi\obj\Debug\net8.0\ref\P
 C:\Users\scspsti10\source\repos\ProtectedApi\ProtectedApi\bin\Debug\net8.0\keys\is-signing-key-3E3F6DD743F72020001E36AA7B3C5A4F.json
 C:\Users\scspsti10\source\repos\ProtectedApi\ProtectedApi\bin\Debug\net8.0\ProtectedApi.xml
 C:\Users\scspsti10\source\repos\ProtectedApi\ProtectedApi\obj\Debug\net8.0\ProtectedApi.xml
+C:\Users\scspsti10\source\repos\ProtectedApi\ProtectedApi\bin\Debug\net8.0\ProtectedApi.staticwebassets.endpoints.json
+C:\Users\scspsti10\source\repos\ProtectedApi\ProtectedApi\obj\Debug\net8.0\ProtectedApi.sourcelink.json
+C:\Users\scspsti10\source\repos\ProtectedApi\ProtectedApi\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\scspsti10\source\repos\ProtectedApi\ProtectedApi\obj\Debug\net8.0\staticwebassets\msbuild.ProtectedApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\scspsti10\source\repos\ProtectedApi\ProtectedApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\scspsti10\source\repos\ProtectedApi\ProtectedApi\obj\Debug\net8.0\ProtectedApi.RazorAssemblyInfo.cache
+C:\Users\scspsti10\source\repos\ProtectedApi\ProtectedApi\obj\Debug\net8.0\ProtectedApi.RazorAssemblyInfo.cs
