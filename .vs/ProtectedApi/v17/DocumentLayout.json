@@ -1,37 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi\\",
+  "WorkspaceRootPath": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi2\\DemoIdentityServer4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58A58EDC-998A-4DC6-8926-32ADAA383A3E}|MvcClient\\MvcClient.csproj|c:\\users\\scspsti10\\source\\repos\\protectedapi\\mvcclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58A58EDC-998A-4DC6-8926-32ADAA383A3E}|MvcClient\\MvcClient.csproj|solutionrelative:mvcclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0261E03-0663-436D-A476-148E4E3F5C84}|ProtectedApi\\ProtectedApi.csproj|c:\\users\\scspsti10\\source\\repos\\protectedapi\\protectedapi\\models\\config\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D0261E03-0663-436D-A476-148E4E3F5C84}|ProtectedApi\\ProtectedApi.csproj|c:\\users\\scspsti10\\source\\repos\\protectedapi2\\demoidentityserver4\\protectedapi\\models\\config\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D0261E03-0663-436D-A476-148E4E3F5C84}|ProtectedApi\\ProtectedApi.csproj|solutionrelative:protectedapi\\models\\config\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58A58EDC-998A-4DC6-8926-32ADAA383A3E}|MvcClient\\MvcClient.csproj|c:\\users\\scspsti10\\source\\repos\\protectedapi\\mvcclient\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{58A58EDC-998A-4DC6-8926-32ADAA383A3E}|MvcClient\\MvcClient.csproj|solutionrelative:mvcclient\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0261E03-0663-436D-A476-148E4E3F5C84}|ProtectedApi\\ProtectedApi.csproj|c:\\users\\scspsti10\\source\\repos\\protectedapi\\protectedapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0261E03-0663-436D-A476-148E4E3F5C84}|ProtectedApi\\ProtectedApi.csproj|solutionrelative:protectedapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58A58EDC-998A-4DC6-8926-32ADAA383A3E}|MvcClient\\MvcClient.csproj|c:\\users\\scspsti10\\source\\repos\\protectedapi\\mvcclient\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58A58EDC-998A-4DC6-8926-32ADAA383A3E}|MvcClient\\MvcClient.csproj|solutionrelative:mvcclient\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0261E03-0663-436D-A476-148E4E3F5C84}|ProtectedApi\\ProtectedApi.csproj|c:\\users\\scspsti10\\source\\repos\\protectedapi\\protectedapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D0261E03-0663-436D-A476-148E4E3F5C84}|ProtectedApi\\ProtectedApi.csproj|c:\\users\\scspsti10\\source\\repos\\protectedapi2\\demoidentityserver4\\protectedapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D0261E03-0663-436D-A476-148E4E3F5C84}|ProtectedApi\\ProtectedApi.csproj|solutionrelative:protectedapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D0261E03-0663-436D-A476-148E4E3F5C84}|ProtectedApi\\ProtectedApi.csproj|c:\\users\\scspsti10\\source\\repos\\protectedapi\\protectedapi\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D0261E03-0663-436D-A476-148E4E3F5C84}|ProtectedApi\\ProtectedApi.csproj|solutionrelative:protectedapi\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0261E03-0663-436D-A476-148E4E3F5C84}|ProtectedApi\\ProtectedApi.csproj|c:\\users\\scspsti10\\source\\repos\\protectedapi\\protectedapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D0261E03-0663-436D-A476-148E4E3F5C84}|ProtectedApi\\ProtectedApi.csproj|c:\\users\\scspsti10\\source\\repos\\protectedapi2\\demoidentityserver4\\protectedapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D0261E03-0663-436D-A476-148E4E3F5C84}|ProtectedApi\\ProtectedApi.csproj|solutionrelative:protectedapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -42,22 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 15,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi\\ProtectedApi\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "ProtectedApi\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi\\ProtectedApi\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "ProtectedApi\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T20:58:43.325Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
@@ -95,94 +61,58 @@
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi\\MvcClient\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "MvcClient\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi\\MvcClient\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "MvcClient\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-31T22:15:18.967Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi\\ProtectedApi\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "ProtectedApi\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi\\ProtectedApi\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "ProtectedApi\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-31T22:07:18.149Z",
+              "DocumentIndex": 2,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi2\\DemoIdentityServer4\\ProtectedApi\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "ProtectedApi\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi2\\DemoIdentityServer4\\ProtectedApi\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "ProtectedApi\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAswF0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T23:24:00.225Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Config.cs",
-              "DocumentMoniker": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi\\ProtectedApi\\Models\\Config\\Config.cs",
-              "RelativeDocumentMoniker": "ProtectedApi\\Models\\Config\\Config.cs",
-              "ToolTip": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi\\ProtectedApi\\Models\\Config\\Config.cs",
-              "RelativeToolTip": "ProtectedApi\\Models\\Config\\Config.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAA2wEIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T22:05:47.295Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi\\ProtectedApi\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "ProtectedApi\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi\\ProtectedApi\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "ProtectedApi\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T22:03:49.467Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi\\MvcClient\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "MvcClient\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi\\MvcClient\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "MvcClient\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAwB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T22:02:53.726Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi\\ProtectedApi\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi2\\DemoIdentityServer4\\ProtectedApi\\Program.cs",
               "RelativeDocumentMoniker": "ProtectedApi\\Program.cs",
-              "ToolTip": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi\\ProtectedApi\\Program.cs",
+              "ToolTip": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi2\\DemoIdentityServer4\\ProtectedApi\\Program.cs",
               "RelativeToolTip": "ProtectedApi\\Program.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAnwGUAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAACQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T22:00:16.663Z",
+              "WhenOpened": "2025-01-31T22:48:54.017Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi\\MvcClient\\Program.cs",
-              "RelativeDocumentMoniker": "MvcClient\\Program.cs",
-              "ToolTip": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi\\MvcClient\\Program.cs",
-              "RelativeToolTip": "MvcClient\\Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Title": "Config.cs",
+              "DocumentMoniker": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi2\\DemoIdentityServer4\\ProtectedApi\\Models\\Config\\Config.cs",
+              "RelativeDocumentMoniker": "ProtectedApi\\Models\\Config\\Config.cs",
+              "ToolTip": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi2\\DemoIdentityServer4\\ProtectedApi\\Models\\Config\\Config.cs",
+              "RelativeToolTip": "ProtectedApi\\Models\\Config\\Config.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAcwDEAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T20:49:37.334Z",
+              "WhenOpened": "2025-01-31T22:47:19.115Z",
               "EditorCaption": ""
             }
           ]
