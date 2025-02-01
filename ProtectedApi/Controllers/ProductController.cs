@@ -49,6 +49,7 @@ namespace ProtectedApi.Controllers
         /// <param name="product"></param>
         /// <returns>retorna el producto creado</returns>
         [HttpPost]
+       // [Authorize(Roles = "Administrator")]
         public IActionResult Add([FromBody] Product product)
         {
             _productService.Add(product);

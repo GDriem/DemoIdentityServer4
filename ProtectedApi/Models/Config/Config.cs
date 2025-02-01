@@ -4,34 +4,8 @@ using System.Collections.Generic;
 
 public static class Config
 {
-    // Definir los recursos de identidad (Claims estándar como nombre, email, etc.)
-    public static IEnumerable<IdentityResource> IdentityResources =>
-        new List<IdentityResource>
-        {
-            new IdentityResources.OpenId(),
-            new IdentityResources.Profile()
-        };
 
-    // Definir los permisos que las APIs pueden exponer
-    public static IEnumerable<ApiScope> ApiScopes =>
-        new List<ApiScope>
-        {
-            new ApiScope("api1", "My API")
-        };
-
-    // Definir los recursos API
-    public static IEnumerable<ApiResource> ApiResources =>
-        new List<ApiResource>
-        {
-            new ApiResource("api1", "My API")
-            {
-                Scopes = { "api1" }
-            }
-        };
-
-  
-
-public static List<TestUser> TestUsers =>
+    public static List<TestUser> TestUsers =>
     new List<TestUser>
     {
         new TestUser
@@ -47,24 +21,43 @@ public static List<TestUser> TestUsers =>
         }
     };
 
-    public static IEnumerable<Client> Clients =>
-     new List<Client>
-     {
-        new Client
+
+    public static IEnumerable<ApiScope> ApiScopes =>
+        new List<ApiScope>
         {
-            ClientId = "mvc-client",
-            ClientSecrets = { new Secret("mvc-secret".Sha256()) },
-            AllowedGrantTypes = GrantTypes.Code,
+            new ApiScope("api1", "My API") // 🔹 Define el scope de la API
+        };
 
-            RedirectUris = { "https://localhost:7168/signin-oidc" },
-            PostLogoutRedirectUris = { "https://localhost:7168/signout-callback-oidc" },
+    public static IEnumerable<ApiResource> ApiResources =>
+        new List<ApiResource>
+        {
+            new ApiResource("api1")
+            {
+                Scopes = { "api1" },
+                UserClaims = { "role" } // 🔹 Permitir que "role" sea parte del token
 
-            AllowedScopes = { "openid", "profile", "api1" },
-            RequirePkce = true,
-            AllowOfflineAccess = true
-        }
-     };
+            }
+        };
 
+    public static IEnumerable<Client> Clients =>
+        new List<Client>
+        {
+            new Client
+            {
+                ClientId = "client", 
+                ClientSecrets = { new Secret("api-secret".Sha256()) },
+                AllowedGrantTypes = GrantTypes.ClientCredentials, 
+                AllowedScopes = { "api1" } 
+            },
+            new Client
+            {
+                ClientId = "ro-client", // 🔹 Cliente que usará credenciales de usuario
+                AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                ClientSecrets = { new Secret("ro-secret".Sha256()) },
+                    AllowedScopes = { "api1", "role" }, // 🔹 Agregar "role" al scope
+                        AlwaysIncludeUserClaimsInIdToken = true
 
+            }
 
+        };
 }

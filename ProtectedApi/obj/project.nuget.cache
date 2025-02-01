@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "79Y8T09OMpY=",
+  "dgSpecHash": "12HGz1d5KAw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi\\ProtectedApi\\ProtectedApi.csproj",
+  "projectFilePath": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi2\\DemoIdentityServer4\\ProtectedApi\\ProtectedApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\scspsti10\\.nuget\\packages\\duende.identitymodel\\7.0.0\\duende.identitymodel.7.0.0.nupkg.sha512",
     "C:\\Users\\scspsti10\\.nuget\\packages\\duende.identityserver\\7.1.0\\duende.identityserver.7.1.0.nupkg.sha512",
