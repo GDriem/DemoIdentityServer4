@@ -2,15 +2,93 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/ProtectedApi/keys/is-signing-key-3E3F6DD743F72020001E36AA7B3C5A4F.json
-/MvcClient/bin/Debug/net8.0
-/MvcClient/obj
-/MvcClient/bin
-/ProtectedApi/bin/Debug/net8.0
-/ProtectedApi/obj
-/ProtectedApi/.vs
-/.vs
-/ProtectedApi/bin/Debug/net8.0/ProtectedApi.dll
-/ProtectedApi/bin/Debug/net8.0/ProtectedApi.exe
-/ProtectedApi/bin/Debug/net8.0/ProtectedApi.pdb
-/.vs/ProtectedApi/FileContentIndex/602001ad-1927-482f-a795-1f0413b3561b.vsidx
+# Archivos generados por compilación
+bin/
+obj/
+
+# Visual Studio Files
+.vs/
+*.user
+*.suo
+*.cache
+*.log
+*.vspscc
+*.vssscc
+*.sln.docstates
+*.dtbcache.v2
+*.futdcache.v2
+*.ide
+*.ide-shm
+*.ide-wal
+
+
+# Rider Files
+.idea/
+
+# Archivos generados por pruebas
+TestResults/
+
+# DotNet local tools
+.dotnet/
+
+# Logs y bases de datos locales
+*.log
+*.sqlite
+*.db
+*.db-journal
+*.mdb
+*.sqlite
+
+# Secrets locales (configuraciones sensibles)
+appsettings.Development.json
+appsettings.Local.json
+user-secrets.json
+secrets.json
+
+# Certificados y claves privadas (no deben versionarse)
+*.pfx
+*.key
+*.pem
+
+# Archivos temporales generados por VS o VS Code
+*.ide
+*.ide-shm
+*.ide-wal
+*.tmp
+*.temp
+*.tmp
+*.bak
+
+# Rider IDE
+.idea/
+
+# Archivos de sistema operativo
+Thumbs.db
+Desktop.ini
+
+# Mac-specific files
+.DS_Store
+
+# Archivos específicos de Rider
+.idea/
+*.DotSettings.user
+
+# Logs de IIS Express
+*.IISExpress.sln
+iisexpress/
+
+# Resultados de Cobertura (coverage reports)
+coverage/
+TestResults/
+
+# Migraciones EF Core (si NO deseas versionarlas)
+# Migrations/
+
+# Visual Studio Code settings
+.vscode/
+
+# Paquetes NuGet (si no deseas almacenarlos)
+packages/
+
+# Publicaciones / despliegues
+publish/

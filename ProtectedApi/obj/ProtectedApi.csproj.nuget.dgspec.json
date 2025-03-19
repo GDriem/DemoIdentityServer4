@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi2\\DemoIdentityServer4\\ProtectedApi\\ProtectedApi.csproj": {}
+    "C:\\Users\\ASUS\\source\\repos\\GDriem\\DemoIdentityServer4\\ProtectedApi\\ProtectedApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi2\\DemoIdentityServer4\\ProtectedApi\\ProtectedApi.csproj": {
+    "C:\\Users\\ASUS\\source\\repos\\GDriem\\DemoIdentityServer4\\ProtectedApi\\ProtectedApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi2\\DemoIdentityServer4\\ProtectedApi\\ProtectedApi.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\GDriem\\DemoIdentityServer4\\ProtectedApi\\ProtectedApi.csproj",
         "projectName": "ProtectedApi",
-        "projectPath": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi2\\DemoIdentityServer4\\ProtectedApi\\ProtectedApi.csproj",
-        "packagesPath": "C:\\Users\\scspsti10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\scspsti10\\source\\repos\\ProtectedApi2\\DemoIdentityServer4\\ProtectedApi\\obj\\",
+        "projectPath": "C:\\Users\\ASUS\\source\\repos\\GDriem\\DemoIdentityServer4\\ProtectedApi\\ProtectedApi.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ASUS\\source\\repos\\GDriem\\DemoIdentityServer4\\ProtectedApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\scspsti10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

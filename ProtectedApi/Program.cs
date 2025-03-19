@@ -1,106 +1,97 @@
 ﻿using Duende.IdentityServer.Configuration;
-using Duende.IdentityServer.Models;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using ProtectedApi.Middlewares;
+using Microsoft.OpenApi.Models;
 using ProtectedApi.Services;
-using System.Reflection;
 
+// Configuración inicial
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-
-//Consola
+// Logging
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 builder.Logging.AddDebug();
 
-/// Configurar IdentityServer
-builder.Services.AddIdentityServer()
+// Configuración de IdentityServer (gestión automática deshabilitada)
+builder.Services.AddIdentityServer(options =>
+{
+    options.KeyManagement.Enabled = false;  // Evita la advertencia del key management
+})
     .AddInMemoryClients(Config.Clients)
     .AddInMemoryApiResources(Config.ApiResources)
     .AddInMemoryApiScopes(Config.ApiScopes)
-    .AddTestUsers(Config.TestUsers) // 🔹 Agrega usuarios en memoria
-    .AddDeveloperSigningCredential();
+    .AddTestUsers(Config.TestUsers)
+    .AddDeveloperSigningCredential(); // 👈 Añadir esta línea que falta
 
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy("AdminOnly", policy => policy.RequireClaim("role", "Administrator"));
-});
-
-
-// Configurar autenticación JWT
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
+// Autenticación JWT
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer("Bearer", options =>
     {
-        options.Authority = "https://localhost:7108";  // 🔹 URL de tu IdentityServer
-        options.Audience = "api1"; // 🔹 Debe coincidir con `ApiResource`
+        options.Authority = "https://localhost:7108";
+        options.Audience = "api1";
         options.TokenValidationParameters = new TokenValidationParameters
         {
-            ValidateIssuerSigningKey = true,
-            ValidateIssuer = true,
             ValidateAudience = true,
-            ValidateLifetime = true
+            ValidateIssuer = true
         };
     });
 
+// Autorización (Requerido para [Authorize])
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("ApiScope", policy =>
+    {
+        policy.RequireAuthenticatedUser();
+        policy.RequireClaim("scope", "api1");
+    });
+});
 
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
+// Swagger con seguridad JWT
 builder.Services.AddSwaggerGen(options =>
 {
-    options.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
-        Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+        Type = SecuritySchemeType.Http,
         Scheme = "Bearer",
         BearerFormat = "JWT",
-        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
-        Description = "Enter 'Bearer' followed by your token.\nExample: Bearer abc123"
+        In = ParameterLocation.Header
     });
 
-    options.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
-            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            new OpenApiSecurityScheme
             {
-                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                Reference = new OpenApiReference
                 {
-                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Type = ReferenceType.SecurityScheme,
                     Id = "Bearer"
                 }
             },
-            new string[] { }
+            Array.Empty<string>()
         }
     });
 });
 
-
-
-
-//Dependencias
+// Dependencias adicionales
 builder.Services.AddSingleton<ProductService>();
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
-// add a middleware to handle exceptions
-app.UseMiddleware<ExceptionMiddleware>();
-
-// Configure the HTTP request pipeline.
+// Pipeline de middleware (orden correcto)
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
+app.UseHttpsRedirection();
 
-app.UseRouting();
-app.UseIdentityServer();
-app.UseAuthentication();
-app.UseAuthorization();
+app.UseIdentityServer();   // Primero IdentityServer
+app.UseAuthentication();   // Después Autenticación
+app.UseAuthorization();    // Finalmente, autorización
+
 app.MapControllers();
 
 app.Run();
