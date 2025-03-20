@@ -52,19 +52,37 @@
           "dependencies": {
             "Duende.IdentityServer": {
               "target": "Package",
-              "version": "[7.1.0, )"
+              "version": "[7.2.0, )"
             },
             "Duende.IdentityServer.AspNetIdentity": {
               "target": "Package",
-              "version": "[7.1.0, )"
+              "version": "[7.2.0, )"
+            },
+            "Duende.IdentityServer.EntityFramework": {
+              "target": "Package",
+              "version": "[7.2.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.12, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[7.2.0, )"
+              "version": "[8.0.0, )"
             }
           },
           "imports": [

@@ -1,6 +1,9 @@
 ﻿using Duende.IdentityServer.Configuration;
+using Duende.IdentityServer.EntityFramework.DbContexts;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using ProtectedApi.Data;
 using ProtectedApi.Services;
 
 // Configuración inicial
@@ -72,6 +75,10 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 });
+
+// Conexión a PostgreSQL con EF Core
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Dependencias adicionales
 builder.Services.AddSingleton<ProductService>();
