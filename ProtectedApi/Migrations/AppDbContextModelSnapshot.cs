@@ -44,7 +44,7 @@ namespace ProtectedApi.Migrations
 
                     b.HasKey("ClientId");
 
-                    b.ToTable("Clients");
+                    b.ToTable("Clients", (string)null);
                 });
 
             modelBuilder.Entity("ProtectedApi.Data.Entities.Role", b =>
@@ -68,7 +68,7 @@ namespace ProtectedApi.Migrations
 
                     b.HasKey("RoleId");
 
-                    b.ToTable("Roles");
+                    b.ToTable("Roles", (string)null);
                 });
 
             modelBuilder.Entity("ProtectedApi.Data.Entities.User", b =>
@@ -100,7 +100,7 @@ namespace ProtectedApi.Migrations
 
                     b.HasKey("UserId");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("ProtectedApi.Data.Entities.UserRole", b =>
@@ -115,7 +115,7 @@ namespace ProtectedApi.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("UserRoles");
+                    b.ToTable("UserRoles", (string)null);
                 });
 
             modelBuilder.Entity("ProtectedApi.Data.Entities.UserRole", b =>
